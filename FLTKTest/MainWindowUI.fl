@@ -1,0 +1,33 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0107 
+header_name {.h} 
+code_name {.cxx}
+Function {make_window()} {open
+} {} 
+
+class MainWindowUI {open
+} {
+  Function {MainWindowUI()} {open
+  } {
+    Fl_Window mainWindow {open
+      xywh {699 338 1164 631} type Double resizable visible
+    } {
+      Fl_Button startButton {
+        label Start
+        xywh {15 570 90 25}
+      }
+      Fl_Button clearButton {
+        label Clear
+        xywh {730 570 90 25}
+      }
+      Fl_Text_Display output {selected
+        xywh {730 15 420 545}
+      }
+      Fl_Box glWindow {selected
+        xywh {15 14 705 546} labeltype NO_LABEL
+        code0 {\#include "GLWindow.h"}
+        class GLWindow
+      }
+    }
+  }
+} 
