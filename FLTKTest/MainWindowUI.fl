@@ -21,12 +21,20 @@ class MainWindowUI {open
         xywh {730 570 90 25}
       }
       Fl_Text_Display output {selected
-        xywh {730 15 420 545}
+        xywh {730 25 420 530}
       }
       Fl_Box glWindow {selected
-        xywh {15 14 705 546} labeltype NO_LABEL
+        xywh {15 25 705 530} labeltype NO_LABEL
         code0 {\#include "GLWindow.h"}
         class GLWindow
+      }
+      Fl_Menu_Bar menuBar {open
+        xywh {0 0 1164 20}
+      } {
+        Submenu statesMenu {
+          label States open
+          xywh {0 0 62 20}
+        } {}
       }
     }
   }

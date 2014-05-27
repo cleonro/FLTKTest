@@ -57,6 +57,9 @@
     <ClInclude Include="UtilSources\GLCamera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AppStates\StateManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -90,6 +93,9 @@
       <Filter>Source Files\Math</Filter>
     </ClCompile>
     <ClCompile Include="UtilSources\GLCamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppStates\StateManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

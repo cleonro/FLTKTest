@@ -5,6 +5,13 @@
 void make_window() {
 }
 
+Fl_Menu_Item MainWindowUI::menu_menuBar[] = {
+ {"States", 0,  0, 0, 64, FL_NORMAL_LABEL, 0, 14, 0},
+ {0,0,0,0,0,0,0,0,0},
+ {0,0,0,0,0,0,0,0,0}
+};
+Fl_Menu_Item* MainWindowUI::statesMenu = MainWindowUI::menu_menuBar + 0;
+
 MainWindowUI::MainWindowUI() {
   Fl_Double_Window* w;
   { Fl_Double_Window* o = mainWindow = new Fl_Double_Window(1164, 631);
@@ -12,8 +19,8 @@ MainWindowUI::MainWindowUI() {
     o->user_data((void*)(this));
     startButton = new Fl_Button(15, 570, 90, 25, "Start");
     clearButton = new Fl_Button(730, 570, 90, 25, "Clear");
-    output = new Fl_Text_Display(730, 15, 420, 545);
-    { GLWindow* o = glWindow = new GLWindow(15, 14, 705, 546);
+    output = new Fl_Text_Display(730, 25, 420, 530);
+    { GLWindow* o = glWindow = new GLWindow(15, 25, 705, 530);
       o->box(FL_NO_BOX);
       o->color(FL_BACKGROUND_COLOR);
       o->selection_color(FL_BACKGROUND_COLOR);
@@ -23,6 +30,9 @@ MainWindowUI::MainWindowUI() {
       o->labelcolor(FL_FOREGROUND_COLOR);
       o->align(FL_ALIGN_CENTER);
       o->when(FL_WHEN_RELEASE);
+    }
+    { Fl_Menu_Bar* o = menuBar = new Fl_Menu_Bar(0, 0, 1164, 20);
+      o->menu(menu_menuBar);
     }
     o->end();
     o->resizable(o);

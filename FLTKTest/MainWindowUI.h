@@ -8,6 +8,7 @@ void make_window();
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Text_Display.H>
 #include "GLWindow.h"
+#include <FL/Fl_Menu_Bar.H>
 
 class MainWindowUI {
 public:
@@ -17,5 +18,8 @@ public:
   Fl_Button *clearButton;
   Fl_Text_Display *output;
   GLWindow *glWindow;
+  Fl_Menu_Bar *menuBar;
+  static Fl_Menu_Item menu_menuBar[];
+  static Fl_Menu_Item *statesMenu;
 };
 #endif
