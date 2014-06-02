@@ -1,5 +1,5 @@
 #include "StateManager.h"
-
+#include "GLSimpleState.h"
 
 BaseState::BaseState()
 {
@@ -11,7 +11,8 @@ BaseState::~BaseState()
 
 }
 
-StateManager::StateManager()
+StateManager::StateManager() :
+	m_activeState(nullptr)
 {
 	addStates();
 }
@@ -30,20 +31,51 @@ StateManager& StateManager::instance()
 
 void StateManager::setActiveState(const std::string& stateName, void* initData)
 {
-	BaseState* oldState = m_states[m_activeStateName];
+	BaseState* oldState = m_activeState;
 	m_activeStateName = stateName;
-	BaseState* activeState = m_states[m_activeStateName];
+	m_activeState = m_states[m_activeStateName];
 	if(oldState != nullptr)
 	{
 		oldState->clear();
 	}
-	if(activeState != nullptr)
+	if(m_activeState != nullptr)
 	{
-		activeState->init(initData);
+		m_activeState->init(initData);
 	}
+}
+
+BaseState* StateManager::activeState()
+{
+	return m_activeState;
+}
+
+void StateManager::updateActiveState(void* data)
+{
+	if(m_activeState == nullptr)
+	{
+		return;
+	}
+
+	if(!m_activeState->initialized())
+	{
+		m_activeState->init();
+	}
+	m_activeState->update(data);
+}
+
+void StateManager::renderActiveState()
+{
+	if(m_activeState == nullptr)
+	{
+		return;
+	}
+
+	m_activeState->render();
 }
 
 void StateManager::addStates()
 {
+	m_states[GL_SIMPLE_STATE] = new GLSimpleState();
+
 
 }

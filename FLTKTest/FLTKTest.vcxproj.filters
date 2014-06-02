@@ -19,6 +19,18 @@
     <Filter Include="Header Files\Math">
       <UniqueIdentifier>{8c94976a-a299-4bb3-9f22-37c9f6570230}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\AppStates">
+      <UniqueIdentifier>{5a86eeba-869f-4cfc-86bf-7150f8be12c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AppStates">
+      <UniqueIdentifier>{c5a09178-f827-427e-97bb-9cdf85e63e23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AppStates\GLSimpleState">
+      <UniqueIdentifier>{8265a2fb-0e55-4e8c-be53-5b2a984b90d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AppStates\GLSimpleState">
+      <UniqueIdentifier>{5cacacba-c50c-493f-a071-5a260e7926ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -58,7 +70,10 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AppStates\StateManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\AppStates</Filter>
+    </ClInclude>
+    <ClInclude Include="AppStates\GLSimpleState\GLSimpleState.h">
+      <Filter>Header Files\AppStates\GLSimpleState</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -96,7 +111,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AppStates\StateManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\AppStates</Filter>
+    </ClCompile>
+    <ClCompile Include="AppStates\GLSimpleState\GLSimpleState.cpp">
+      <Filter>Source Files\AppStates\GLSimpleState</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

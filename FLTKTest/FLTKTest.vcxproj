@@ -50,7 +50,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>y:\fltk\;$(SolutionDir)\FLTKTest\UtilSources\;$(SolutionDir)\FLTKTest\UtilSources\Math;$(SolutionDir)\FLTKTest\AppStates</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>y:\fltk\;$(SolutionDir)\FLTKTest\UtilSources\;$(SolutionDir)\FLTKTest\UtilSources\Math;$(SolutionDir)\FLTKTest\AppStates;$(SolutionDir)\FLTKTest\AppStates\GLSimpleState;$(SolutionDir)\FLTKTest</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -81,6 +81,7 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AppStates\GLSimpleState\GLSimpleState.h" />
     <ClInclude Include="AppStates\StateManager.h" />
     <ClInclude Include="GLWindow.h" />
     <ClInclude Include="MainWindow.h" />
@@ -95,6 +96,7 @@
     <ClInclude Include="UtilSources\Utils\math_utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AppStates\GLSimpleState\GLSimpleState.cpp" />
     <ClCompile Include="AppStates\StateManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GLWindow.cpp" />

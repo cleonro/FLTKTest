@@ -28,6 +28,9 @@ public:
 	void setActiveState(const std::string& stateName, void* initData = NULL);
 	BaseState* activeState();
 
+	void updateActiveState(void* data = nullptr);
+	void renderActiveState();
+
 protected:
 	StateManager();
 	~StateManager();
@@ -35,7 +38,8 @@ protected:
 	void addStates();
 
 private:
-	std::map<std::string, BaseState*> m_states;
-	std::string m_activeStateName;
+	std::map<std::string, BaseState*>	m_states;
+	std::string							m_activeStateName;
+	BaseState*							m_activeState;
 };
 
