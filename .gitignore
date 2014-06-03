@@ -1,9 +1,15 @@
 ipch/
+
 Debug/
+
 Release/
+
 FLTKTest/Debug/
+
 FLTKTest/Release/
 
+FLTKTest.opensdf
 
 FLTKTest.sdf
+
 FLTKTest.suo
