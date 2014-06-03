@@ -50,7 +50,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>y:\fltk\;$(SolutionDir)\FLTKTest\UtilSources\;$(SolutionDir)\FLTKTest\UtilSources\Math;$(SolutionDir)\FLTKTest\AppStates;$(SolutionDir)\FLTKTest\AppStates\GLSimpleState;$(SolutionDir)\FLTKTest</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>y:\fltk\;$(SolutionDir)\FLTKTest\UtilSources\;$(SolutionDir)\FLTKTest\UtilSources\Math;$(SolutionDir)\FLTKTest\AppStates;$(SolutionDir)\FLTKTest\AppStates\GLSimpleState;$(SolutionDir)\FLTKTest;$(SolutionDir)\FLTKTest\UtilSources\DrawUtils</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -88,6 +88,9 @@
     <ClInclude Include="MainWindowUI.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="UtilSources\DrawUtils\Draw2D.h" />
+    <ClInclude Include="UtilSources\DrawUtils\gltest.h" />
+    <ClInclude Include="UtilSources\DrawUtils\VariousObjects.h" />
     <ClInclude Include="UtilSources\GLCamera.h" />
     <ClInclude Include="UtilSources\Math\Matrix4x4.h" />
     <ClInclude Include="UtilSources\Math\Quaternion.h" />
@@ -103,6 +106,9 @@
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="MainWindowUI.cxx" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="UtilSources\DrawUtils\Draw2D.cpp" />
+    <ClCompile Include="UtilSources\DrawUtils\gltest.cpp" />
+    <ClCompile Include="UtilSources\DrawUtils\VariousObjects.cpp" />
     <ClCompile Include="UtilSources\GLCamera.cpp" />
     <ClCompile Include="UtilSources\Math\Matrix4x4.cpp" />
     <ClCompile Include="UtilSources\Math\Quaternion.cpp" />

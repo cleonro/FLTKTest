@@ -31,6 +31,12 @@
     <Filter Include="Source Files\AppStates\GLSimpleState">
       <UniqueIdentifier>{5cacacba-c50c-493f-a071-5a260e7926ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DrawUtils">
+      <UniqueIdentifier>{8713defd-b2f4-43cb-8cd9-da4d0ad6f420}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DrawUtils">
+      <UniqueIdentifier>{98839ad7-49da-4a9f-bf2c-5ad92ec4cfc9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -75,6 +81,15 @@
     <ClInclude Include="AppStates\GLSimpleState\GLSimpleState.h">
       <Filter>Header Files\AppStates\GLSimpleState</Filter>
     </ClInclude>
+    <ClInclude Include="UtilSources\DrawUtils\VariousObjects.h">
+      <Filter>Header Files\DrawUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilSources\DrawUtils\gltest.h">
+      <Filter>Header Files\DrawUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilSources\DrawUtils\Draw2D.h">
+      <Filter>Header Files\DrawUtils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -115,6 +130,15 @@
     </ClCompile>
     <ClCompile Include="AppStates\GLSimpleState\GLSimpleState.cpp">
       <Filter>Source Files\AppStates\GLSimpleState</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilSources\DrawUtils\Draw2D.cpp">
+      <Filter>Source Files\DrawUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilSources\DrawUtils\gltest.cpp">
+      <Filter>Source Files\DrawUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilSources\DrawUtils\VariousObjects.cpp">
+      <Filter>Source Files\DrawUtils</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
