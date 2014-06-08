@@ -1,6 +1,38 @@
 #include "StateManager.h"
 #include "GLSimpleState.h"
 
+UIEvent::UIEvent(UIEventType type)
+	: m_type(type)
+{
+
+}
+
+UIEvent::~UIEvent()
+{
+
+}
+
+bool& UIEvent::rbutton(int index)
+{
+	index = index % 3;
+	return m_buttons[index];
+}
+
+int& UIEvent::rkey()
+{
+	return m_key;
+}
+
+int& UIEvent::rx()
+{
+	return m_x;
+}
+
+int& UIEvent::ry()
+{
+	return m_y;
+}
+
 BaseState::BaseState()
 {
 
@@ -80,4 +112,14 @@ void StateManager::addStates()
 	m_activeStateName = GL_SIMPLE_STATE;
 	
 	m_activeState = m_states[m_activeStateName];
+}
+
+void StateManager::sendEvent(UIEvent* event)
+{
+	if(m_activeState == nullptr)
+	{
+		return;
+	}
+
+	m_activeState->event(event);
 }

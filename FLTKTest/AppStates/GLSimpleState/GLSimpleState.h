@@ -15,6 +15,7 @@ public:
 	virtual void update(void* data = nullptr);
 	virtual void render();
 	virtual bool initialized();
+	virtual bool event(UIEvent* event);
 
 protected:
 	GLSimpleState();
@@ -28,5 +29,10 @@ private:
 	bool m_initialized;
 
 	OGL3DCamera m_camera;
+
+	//input
+	bool m_buttonPressed;
+	int m_startX;
+	int m_startY;
 };
 

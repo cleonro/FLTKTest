@@ -17,6 +17,6 @@ protected:
 	void resize(int x, int y, int w, int h);
 
 private:
-	
+
 };
 

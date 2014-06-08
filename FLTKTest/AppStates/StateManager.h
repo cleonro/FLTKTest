@@ -10,18 +10,33 @@ class UIEvent
 public:
 	enum UIEventType
 	{
-		Resize
+		MOUSE_DOWN,
+		MOUSE_MOVE,
+		MOUSE_UP,
+		MOUSE_WHEEL,
+		KEY_DOWN,
+		KEY_UP
 	};
 
-	UIEvent(void* data, int dataSize);
+	UIEvent(UIEventType type);
 	~UIEvent();
 
-	void* data() {return m_data;}
-	void dataSize() {return m_dataSize;}
+	UIEventType type() {return m_type;}
+
+	bool& rbutton(int index);
+	int& rkey();
+
+	int& rx();
+	int& ry();
 
 private:
-	void* m_data;
-	int m_size;
+	bool m_buttons[3];
+	int m_key;
+
+	int m_x;
+	int m_y;
+
+	UIEventType m_type;
 };
 
 class BaseState
