@@ -77,5 +77,7 @@ void StateManager::addStates()
 {
 	m_states[GL_SIMPLE_STATE] = new GLSimpleState();
 
-
+	m_activeStateName = GL_SIMPLE_STATE;
+	
+	m_activeState = m_states[m_activeStateName];
 }

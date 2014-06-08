@@ -5,6 +5,25 @@
 
 #define STATEMNGR (StateManager::instance())
 
+class UIEvent
+{
+public:
+	enum UIEventType
+	{
+		Resize
+	};
+
+	UIEvent(void* data, int dataSize);
+	~UIEvent();
+
+	void* data() {return m_data;}
+	void dataSize() {return m_dataSize;}
+
+private:
+	void* m_data;
+	int m_size;
+};
+
 class BaseState
 {
 	friend class StateManager;
@@ -14,6 +33,7 @@ public:
 	virtual void update(void* data = nullptr) = 0;
 	virtual void render() = 0;
 	virtual bool initialized() = 0;
+	virtual bool event(UIEvent* event) = 0;
 
 protected:
 	BaseState();
@@ -30,6 +50,8 @@ public:
 
 	void updateActiveState(void* data = nullptr);
 	void renderActiveState();
+
+	void sendEvent(UIEvent* event);
 
 protected:
 	StateManager();

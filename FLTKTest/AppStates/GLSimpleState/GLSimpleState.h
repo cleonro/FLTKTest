@@ -1,6 +1,7 @@
 #pragma once
 
 #include "StateManager.h"
+#include "GLCamera.h"
 
 #define GL_SIMPLE_STATE "GLSimpleState"
 
@@ -20,6 +21,12 @@ protected:
 	~GLSimpleState();
 
 private:
+	void lightOn();
+	void lightOff();
+
+private:
 	bool m_initialized;
+
+	OGL3DCamera m_camera;
 };
 

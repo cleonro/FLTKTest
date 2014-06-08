@@ -16,12 +16,6 @@ GLWindow::~GLWindow()
 
 int GLWindow::handle(int event)
 {
-	//test-remove
-// 	std::ostringstream buff;
-// 	buff << "GLWindow event " << event << "\n";
-// 	LOGGER.log(buff.str().c_str());
-// 	//
-// 
 // 	switch(event)
 // 	{
 // 	case FL_PUSH:
@@ -35,17 +29,16 @@ int GLWindow::handle(int event)
 
 void GLWindow::init()
 { 
-// 	//valid(1);
+	valid(1);
+	
 }
 
 void GLWindow::draw()
 {
-// 	if(!valid())
-// 	{
-// 		init();
-// 	}
-// 	glClearColor(0.3, 0.5, 0.7, 1.0);
-// 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	if(!valid())
+	{
+		init();
+	}
 
 	STATEMNGR.updateActiveState();
 	STATEMNGR.renderActiveState();
@@ -53,11 +46,5 @@ void GLWindow::draw()
 
 void GLWindow::resize(int x, int y, int w, int h)
 {
-	//test-remove
-// 	std::ostringstream buff;
-// 	buff << "GLWindow resize " << x << ", " << "y, " << w << ", " << h <<  "\n";
-// 	LOGGER.log(buff.str().c_str());
-	//
-
 	Fl_Gl_Window::resize(x, y, w, h);
 }
