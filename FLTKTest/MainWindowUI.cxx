@@ -20,7 +20,7 @@ MainWindowUI::MainWindowUI() {
     startButton = new Fl_Button(15, 570, 90, 25, "Start");
     clearButton = new Fl_Button(730, 570, 90, 25, "Clear");
     output = new Fl_Text_Display(730, 25, 420, 530);
-    { GLWindow* o = glWindow = new GLWindow(15, 25, 705, 530);
+    { GLWindow* o = glWindow = new GLWindow(15, 25, 710, 280);
       o->box(FL_NO_BOX);
       o->color(FL_BACKGROUND_COLOR);
       o->selection_color(FL_BACKGROUND_COLOR);
@@ -33,6 +33,17 @@ MainWindowUI::MainWindowUI() {
     }
     { Fl_Menu_Bar* o = menuBar = new Fl_Menu_Bar(0, 0, 1164, 20);
       o->menu(menu_menuBar);
+    }
+    { SecondGLWindow* o = secondGLWindow = new SecondGLWindow(15, 314, 705, 241);
+      o->box(FL_NO_BOX);
+      o->color(FL_BACKGROUND_COLOR);
+      o->selection_color(FL_BACKGROUND_COLOR);
+      o->labeltype(FL_NO_LABEL);
+      o->labelfont(0);
+      o->labelsize(14);
+      o->labelcolor(FL_FOREGROUND_COLOR);
+      o->align(FL_ALIGN_CENTER);
+      o->when(FL_WHEN_RELEASE);
     }
     o->end();
     o->resizable(o);

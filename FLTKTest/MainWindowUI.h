@@ -9,6 +9,7 @@ void make_window();
 #include <FL/Fl_Text_Display.H>
 #include "GLWindow.h"
 #include <FL/Fl_Menu_Bar.H>
+#include "SecondGLWindow.h"
 
 class MainWindowUI {
 public:
@@ -21,5 +22,6 @@ public:
   Fl_Menu_Bar *menuBar;
   static Fl_Menu_Item menu_menuBar[];
   static Fl_Menu_Item *statesMenu;
+  SecondGLWindow *secondGLWindow;
 };
 #endif

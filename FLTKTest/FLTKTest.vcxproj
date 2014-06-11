@@ -86,6 +86,7 @@
     <ClInclude Include="GLWindow.h" />
     <ClInclude Include="MainWindow.h" />
     <ClInclude Include="MainWindowUI.h" />
+    <ClInclude Include="SecondGLWindow.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="UtilSources\DrawUtils\Draw2D.h" />
@@ -105,6 +106,7 @@
     <ClCompile Include="GLWindow.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="MainWindowUI.cxx" />
+    <ClCompile Include="SecondGLWindow.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="UtilSources\DrawUtils\Draw2D.cpp" />
     <ClCompile Include="UtilSources\DrawUtils\gltest.cpp" />

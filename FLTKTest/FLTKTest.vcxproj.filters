@@ -90,6 +90,9 @@
     <ClInclude Include="UtilSources\DrawUtils\Draw2D.h">
       <Filter>Header Files\DrawUtils</Filter>
     </ClInclude>
+    <ClInclude Include="SecondGLWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -139,6 +142,9 @@
     </ClCompile>
     <ClCompile Include="UtilSources\DrawUtils\VariousObjects.cpp">
       <Filter>Source Files\DrawUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondGLWindow.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
