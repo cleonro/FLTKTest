@@ -68,6 +68,72 @@ int SecondGLWindow::handle(int event)
 {
 	int r = Fl_Gl_Window::handle(event);
 
+	switch(event)
+	{
+	case FL_ENTER:
+		r = 1;
+		break;
+	case FL_PUSH:
+		{
+			r = 1;
+			if(Fl::event_button1() == 0)
+			{
+				break;
+			}
+			int x = Fl::event_x();
+			int y = Fl::event_y();
+			m_x = -m_glSizeX + x * 2.0 * m_glSizeX / this->w();
+			m_y = m_glSizeY - y * 2.0 * m_glSizeY / this->h();
+			this->redraw();
+		}
+		break;
+	//case FL_RELEASE:
+	//	{
+	//		r = 1;
+	//		if(Fl::event_button1() == 0)
+	//		{
+	//			break;
+	//		}
+	//		int x = Fl::event_x();
+	//		int y = Fl::event_y();
+	//		m_x = -m_glSizeX + x * 2.0 * m_glSizeX / this->w();
+	//		m_y = m_glSizeY - y * 2.0 * m_glSizeY / this->h();
+	//		this->redraw();
+	//	}
+	//	break;
+	case FL_DRAG:
+		{
+			r = 1;
+			if(Fl::event_button1() == 0)
+			{
+				break;
+			}
+			int x = Fl::event_x();
+			int y = Fl::event_y();
+			m_x = -m_glSizeX + x * 2.0 * m_glSizeX / this->w();
+			m_y = m_glSizeY - y * 2.0 * m_glSizeY / this->h();
+			this->redraw();
+		}
+		break;
+	case FL_MOUSEWHEEL:
+		{
+			r = 1;
+			int dy = Fl::event_dy();
+			if(dy > 0)
+			{
+				m_glSizeX = 1.1 * m_glSizeX;
+			}
+			else
+			{
+				m_glSizeX = 0.9 * m_glSizeX;
+			}
+			redraw();
+		}
+	default:
+
+		break;	
+	}
+
 	return r;
 }
 
@@ -89,7 +155,7 @@ void SecondGLWindow::drawTriangle()
 	glVertex2f(x3, y3);
 	glEnd();
 
-	std::stringstream buff;
-	buff << "Triangle [" << x1 << ", " << y1 << "] [" << x2 << ", " << y2 << "] [" << x3 << ", " << y3 << "]\n";
-	LOGGER.log(buff.str().c_str());
+	//std::stringstream buff;
+	//buff << "Triangle [" << x1 << ", " << y1 << "] [" << x2 << ", " << y2 << "] [" << x3 << ", " << y3 << "]\n";
+	//LOGGER.log(buff.str().c_str());
 }
