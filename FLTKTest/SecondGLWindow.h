@@ -2,6 +2,8 @@
 
 #include <FL/Fl_Gl_Window.H>
 
+#define _USE_MATH_DEFINES
+
 class SecondGLWindow : public Fl_Gl_Window
 {
 public:
@@ -18,6 +20,7 @@ private:
 
 private:
 	float m_glSizeX;
+	float m_glSizeY;
 
 	//triangle center and radius
 	float m_x;
