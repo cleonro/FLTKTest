@@ -127,6 +127,7 @@ int SecondGLWindow::handle(int event)
 			{
 				m_glSizeX = 0.9 * m_glSizeX;
 			}
+			valid(0);
 			redraw();
 		}
 	default:
