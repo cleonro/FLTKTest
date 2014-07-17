@@ -50,7 +50,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>d:\Libs\Binaries\fltk-1.3.2\include\;$(SolutionDir)\FLTKTest\UtilSources\;$(SolutionDir)\FLTKTest\UtilSources\Math;$(SolutionDir)\FLTKTest\AppStates;$(SolutionDir)\FLTKTest\AppStates\GLSimpleState;$(SolutionDir)\FLTKTest;$(SolutionDir)\FLTKTest\UtilSources\DrawUtils</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>d:\Libs\Binaries\fltk-1.3.2\include\;$(SolutionDir)\FLTKTest\UtilSources\;$(SolutionDir)\FLTKTest\UtilSources\Math;$(SolutionDir)\FLTKTest\AppStates;$(SolutionDir)\FLTKTest\AppStates\GLSimpleState;$(SolutionDir)\FLTKTest;$(SolutionDir)\FLTKTest\UtilSources\DrawUtils;$(SolutionDir)\FLTKTest\AppStates\GL3DVolumeState;$(SolutionDir)\FLTKTest\UtilSources\Utils</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -85,6 +85,8 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AppStates\GL3DVolumeState\GL3DVolumeState.h" />
+    <ClInclude Include="AppStates\GL3DVolumeState\VoxelCube.h" />
     <ClInclude Include="AppStates\GLSimpleState\GLSimpleState.h" />
     <ClInclude Include="AppStates\StateManager.h" />
     <ClInclude Include="GLWindow.h" />
@@ -100,9 +102,12 @@
     <ClInclude Include="UtilSources\Math\Quaternion.h" />
     <ClInclude Include="UtilSources\Math\Vector3.h" />
     <ClInclude Include="UtilSources\Math\Vector4.h" />
+    <ClInclude Include="UtilSources\Utils\glext.h" />
     <ClInclude Include="UtilSources\Utils\math_utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AppStates\GL3DVolumeState\GL3DVolumeState.cpp" />
+    <ClCompile Include="AppStates\GL3DVolumeState\VoxelCube.cpp" />
     <ClCompile Include="AppStates\GLSimpleState\GLSimpleState.cpp" />
     <ClCompile Include="AppStates\StateManager.cpp" />
     <ClCompile Include="main.cpp" />

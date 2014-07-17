@@ -1,5 +1,6 @@
 #include "StateManager.h"
 #include "GLSimpleState.h"
+#include "GL3DVolumeState.h"
 
 UIEvent::UIEvent(UIEventType type)
 	: m_type(type)
@@ -108,8 +109,9 @@ void StateManager::renderActiveState()
 void StateManager::addStates()
 {
 	m_states[GL_SIMPLE_STATE] = new GLSimpleState();
+	m_states[GL_3D_VOLUME_STATE] = new GL3DVolumeState();
 
-	m_activeStateName = GL_SIMPLE_STATE;
+	m_activeStateName = GL_3D_VOLUME_STATE;//GL_SIMPLE_STATE;
 	
 	m_activeState = m_states[m_activeStateName];
 }

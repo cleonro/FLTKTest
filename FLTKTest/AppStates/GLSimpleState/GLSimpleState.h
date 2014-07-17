@@ -21,10 +21,11 @@ protected:
 	GLSimpleState();
 	~GLSimpleState();
 
-private:
 	void lightOn();
 	void lightOff();
-
+	
+	inline OGL3DCamera* camera() {return &m_camera;}
+	
 private:
 	bool m_initialized;
 

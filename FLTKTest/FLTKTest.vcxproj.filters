@@ -37,6 +37,12 @@
     <Filter Include="Source Files\DrawUtils">
       <UniqueIdentifier>{98839ad7-49da-4a9f-bf2c-5ad92ec4cfc9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\AppStates\GL3DVolumeState">
+      <UniqueIdentifier>{95d449f4-299e-4602-bdff-0fc5d4dcf671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AppStates\GL3DVolumeState">
+      <UniqueIdentifier>{2180e568-0864-41c2-863b-33607878a21c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -90,6 +96,15 @@
     <ClInclude Include="UtilSources\DrawUtils\Draw2D.h">
       <Filter>Header Files\DrawUtils</Filter>
     </ClInclude>
+    <ClInclude Include="AppStates\GL3DVolumeState\GL3DVolumeState.h">
+      <Filter>Header Files\AppStates\GL3DVolumeState</Filter>
+    </ClInclude>
+    <ClInclude Include="AppStates\GL3DVolumeState\VoxelCube.h">
+      <Filter>Header Files\AppStates\GL3DVolumeState</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilSources\Utils\glext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -139,6 +154,12 @@
     </ClCompile>
     <ClCompile Include="UtilSources\DrawUtils\VariousObjects.cpp">
       <Filter>Source Files\DrawUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="AppStates\GL3DVolumeState\GL3DVolumeState.cpp">
+      <Filter>Source Files\AppStates\GL3DVolumeState</Filter>
+    </ClCompile>
+    <ClCompile Include="AppStates\GL3DVolumeState\VoxelCube.cpp">
+      <Filter>Source Files\AppStates\GL3DVolumeState</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
